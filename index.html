@@ -6,76 +6,117 @@
     <title>Yasin Demek | Senior Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(90deg, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-slate-50 text-slate-900 font-sans">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-tight">YASIN DEMEK</h1>
-            <div class="space-x-6 text-sm font-medium uppercase tracking-widest">
+    <header class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-black tracking-tighter hover:opacity-80 transition">YSNDMK<span class="text-blue-600">.DEV</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider text-slate-600">
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
                 <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-                <a href="mailto:yasindemek@proton.me" class="text-blue-600 border border-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition">Contact</a>
+                <a href="cv.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Resume</a>
             </div>
         </nav>
     </header>
 
-    <section id="about" class="max-w-5xl mx-auto px-6 py-20 text-center">
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Senior Software Engineer</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Over 5 years of experience building scalable Fintech and E-commerce solutions using 
-            <span class="text-blue-600 font-semibold">React, Next.js, and TypeScript.</span>
-        </p>
-        <div class="mt-8 flex justify-center space-x-4">
-            <a href="https://linkedin.com/in/yasin-demek" target="_blank" class="text-2xl hover:text-blue-700 transition"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/yasindemek" target="_blank" class="text-2xl hover:text-gray-700 transition"><i class="fab fa-github"></i></a>
+    <section id="about" class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                Senior <span class="gradient-text">Software Engineer</span>
+            </h2>
+            <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+                Over 5 years of experience building high-performance web applications[cite: 175]. Specialized in 
+                <span class="font-bold text-slate-800">React, Next.js, and TypeScript</span>[cite: 176, 178].
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg">
+                    View Portfolio
+                </a>
+                <a href="cv.html" class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition shadow-sm">
+                    Access Resume
+                </a>
+            </div>
+            <div class="mt-12 flex justify-center space-x-6 text-3xl text-slate-400">
+                <a href="https://linkedin.com/in/yasin-demek" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ysndmk-dev" target="_blank" class="hover:text-slate-900 transition"><i class="fab fa-github"></i></a>
+                <a href="mailto:yasindemek@proton.me" class="hover:text-blue-500 transition"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="bg-white py-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <h3 class="text-2xl font-bold mb-12 border-l-4 border-blue-600 pl-4 uppercase tracking-wider">Key Projects</h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="group border p-6 rounded-xl hover:shadow-xl transition-all border-gray-100">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Fintech</span>
-                    <h4 class="text-xl font-bold mt-2">PayPortal</h4>
-                    <p class="text-gray-600 mt-3 mb-4">Secure banking portal for agent credit operations developed with TypeScript, RTK Query, and OIDC.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 px-2 py-1 text-xs rounded">React</span>
-                        <span class="bg-gray-100 px-2 py-1 text-xs rounded">OIDC</span>
-                        <span class="bg-gray-100 px-2 py-1 text-xs rounded">Fintech</span>
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-16 text-center">Featured Work</h3>
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <div class="group relative bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all">
+                    <div class="mb-4 text-blue-600 font-bold text-sm tracking-widest uppercase">Fintech</div>
+                    <h4 class="text-2xl font-bold mb-4">PayPortal</h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Secure banking portal for agent bank credit operations[cite: 185]. Integrated **OIDC** and **RTK Query** for robust data management[cite: 185, 186].
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">TypeScript</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">React</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">Fintech</span>
                     </div>
                 </div>
 
-                <div class="group border p-6 rounded-xl hover:shadow-xl transition-all border-gray-100">
-                    <span class="text-xs font-bold text-green-600 uppercase tracking-widest">E-commerce</span>
-                    <h4 class="text-xl font-bold mt-2 text-gray-800">BEK Platform</h4>
-                    <p class="text-gray-600 mt-3 mb-4">Advanced B2B pharmaceutical platform featuring bulk purchasing and negotiation modules using Next.js.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 px-2 py-1 text-xs rounded">Next.js</span>
-                        <span class="bg-gray-100 px-2 py-1 text-xs rounded">B2B</span>
-                        <span class="bg-gray-100 px-2 py-1 text-xs rounded">SSR</span>
+                <div class="group relative bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all">
+                    <div class="mb-4 text-purple-600 font-bold text-sm tracking-widest uppercase">E-Commerce</div>
+                    <h4 class="text-2xl font-bold mb-4 text-slate-800">BEK Platform</h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        B2B Pharmaceutical platform with specialized bulk purchasing and negotiation modules[cite: 183]. Developed with **Next.js** for optimal SEO[cite: 183].
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">Next.js</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">SSR</span>
+                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">B2B</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-slate-900 rounded-[3rem] p-12 text-white">
+                <h3 class="text-3xl font-bold mb-12 text-center text-white/90">Core Expertise</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <i class="fab fa-react text-4xl mb-4 text-blue-400"></i>
+                        <p class="font-bold">Frontend</p>
+                        <p class="text-xs text-white/50 mt-1">React, Next.js</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <i class="fas fa-code text-4xl mb-4 text-yellow-400"></i>
+                        <p class="font-bold">TypeScript</p>
+                        <p class="text-xs text-white/50 mt-1">Robust Codebases</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <i class="fab fa-aws text-4xl mb-4 text-orange-400"></i>
+                        <p class="font-bold">Cloud</p>
+                        <p class="text-xs text-white/50 mt-1">Lambda, DynamoDB</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <i class="fas fa-server text-4xl mb-4 text-green-400"></i>
+                        <p class="font-bold">Backend</p>
+                        <p class="text-xs text-white/50 mt-1">Node.js, Express</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-6">
-            <h3 class="text-2xl font-bold mb-12 border-l-4 border-blue-600 pl-4 uppercase tracking-wider">Core Expertise</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-4 bg-white rounded shadow-sm hover:shadow transition">React / Next.js</div>
-                <div class="p-4 bg-white rounded shadow-sm hover:shadow transition">TypeScript</div>
-                <div class="p-4 bg-white rounded shadow-sm hover:shadow transition">Node.js</div>
-                <div class="p-4 bg-white rounded shadow-sm hover:shadow transition">AWS Cloud</div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center text-gray-500 text-sm border-t">
-        <p>© 2025 Yasin Demek. Hosted on GitHub Pages.</p>
+    <footer class="py-12 text-center text-slate-400 text-sm border-t border-slate-200">
+        <p>© 2025 Yasin Demek | <a href="mailto:yasindemek@proton.me" class="hover:text-blue-600 transition">yasindemek@proton.me</a></p>
     </footer>
 
 </body>

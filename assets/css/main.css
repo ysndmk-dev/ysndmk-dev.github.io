@@ -42,18 +42,6 @@ body {
     transform: scale(0.95);
 }
 
-/* Theme Label Styles */
-.theme-label {
-    position: fixed;
-    bottom: 2.5rem;
-    left: 2rem;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.5;
-    z-index: 1000;
-    pointer-events: none;
-}
 
 /* Theme Selector Container */
 .surprise-container {
@@ -632,6 +620,17 @@ body {
     border-color: rgba(0, 243, 255, 0.2) !important;
 }
 
+.theme-cyber .footer-copyright {
+    color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+
+.theme-cyber .version-text {
+    color: #00f3ff !important;
+    opacity: 1 !important;
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+}
+
 /* Specific Project Card Overrides for Cyber */
 .theme-cyber .card .tag-badge {
     border: 1px solid rgba(0, 243, 255, 0.5);
@@ -679,6 +678,30 @@ body {
 .theme-cyber .social-links a:hover i {
     color: #00f3ff;
     filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.8));
+}
+
+/* Fix Skill Cards in Cyber Theme */
+.theme-cyber .skill-card {
+    background: #15151a !important;
+    border: 1px solid rgba(0, 243, 255, 0.2) !important;
+}
+
+.theme-cyber .skill-card h5 {
+    color: #fff !important;
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+}
+
+.theme-cyber .skill-card p {
+    color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+
+.theme-cyber .skill-card .bg-slate-50 {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.theme-cyber .skill-card i {
+    filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.4));
 }
 
 .theme-cyber .card:hover {
@@ -779,7 +802,7 @@ body {
 }
 
 /* ==========================================
-   THEME: RETRO (VT323 Version)
+   THEME: RETRO (Full Edition)
    ========================================== */
 .theme-retro {
     background-color: #F2E9E1;
@@ -787,44 +810,229 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
+/* Background Grid */
+.theme-retro::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(to right, rgba(68, 64, 60, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(68, 64, 60, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    pointer-events: none;
+}
+
 .theme-retro .scanlines {
     display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.02) 50%);
     background-size: 100% 4px;
-    border: none;
+    opacity: 0.6;
 }
 
-.theme-retro .stats-value {
-    color: #D94E36;
-    font-size: 4rem;
-    font-family: 'VT323';
+/* Typography Overrides */
+.theme-retro h1,
+.theme-retro h2,
+.theme-retro h3,
+.theme-retro h4,
+.theme-retro h5,
+.theme-retro .stats-value,
+.theme-retro .logo,
+.theme-retro .nav-links a {
+    font-family: 'VT323', monospace;
 }
 
-.theme-retro .btn-primary {
-    background: #D94E36;
-    color: #fff;
+.theme-retro .navbar {
+    background: rgba(242, 233, 225, 0.95);
+    border-bottom: 2px solid #44403C;
+}
+
+.theme-retro .logo {
+    border: 2px solid #D94E36;
+    padding: 0.25rem 0.5rem;
+    background: #FFFAF5;
     box-shadow: 4px 4px 0px #44403C;
-    border-radius: 0;
 }
 
-.theme-retro .btn-secondary {
-    background: #E6A15C;
+.theme-retro .logo .text-blue-600 {
+    color: #D94E36 !important;
+}
+
+.theme-retro .badge {
+    border: 2px solid #44403C;
+    background: #FFFAF5;
     color: #44403C;
     box-shadow: 4px 4px 0px #44403C;
     border-radius: 0;
 }
+
+.theme-retro .hero-title {
+    color: #44403C;
+    text-transform: uppercase;
+}
+
+.theme-retro .hero-title span {
+    color: #D94E36 !important;
+    text-decoration: underline;
+    text-decoration-color: #E6A15C;
+    text-decoration-thickness: 4px;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+}
+
+.theme-retro .hero-desc {
+    border-left: 4px solid #E6A15C;
+    padding-left: 1.5rem;
+    color: #44403C;
+}
+
+.theme-retro .btn-primary {
+    background: #D94E36 !important;
+    color: #fff !important;
+    border: 2px solid #44403C;
+    box-shadow: 4px 4px 0px #44403C;
+    border-radius: 0;
+}
+
+.theme-retro .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px #44403C;
+}
+
+.theme-retro .btn-secondary {
+    background: #E6A15C !important;
+    color: #44403C !important;
+    border: 2px solid #44403C;
+    box-shadow: 4px 4px 0px #44403C;
+    border-radius: 0;
+}
+
+.theme-retro .stats-section {
+    background: #FFFAF5;
+    border-top: 2px solid #44403C;
+    border-bottom: 2px solid #44403C;
+}
+
+.theme-retro .stats-value {
+    color: #D94E36;
+    font-size: 3.5rem;
+}
+
+.theme-retro .card {
+    background: #FFFAF5;
+    border: 2px solid #44403C;
+    box-shadow: 4px 4px 0px #44403C;
+    border-radius: 0;
+}
+
+.theme-retro .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0px #44403C;
+}
+
+.theme-retro .tag-badge {
+    background: rgba(230, 161, 92, 0.2);
+    border: 1px solid #44403C;
+    color: #44403C;
+}
+
+.theme-retro .skills-section {
+    background: #FFFAF5;
+    border-top: 2px solid #44403C;
+    border-bottom: 2px solid #44403C;
+}
+
+.theme-retro .skill-card {
+    background: #F2E9E1;
+    border: 2px solid #44403C;
+    box-shadow: 4px 4px 0px #44403C;
+    border-radius: 0;
+}
+
+.theme-retro .skill-card:hover {
+    transform: scale(1.05);
+}
+
+.theme-retro .footer {
+    background: #F2E9E1;
+    border-top: 2px solid #44403C;
+}
+
+.theme-retro .surprise-btn {
+    background: #D94E36;
+    color: #fff;
+    border: 2px solid #44403C;
+    box-shadow: 6px 6px 0px #44403C;
+}
+
+/* Code Visual Retro Style */
 .theme-retro .code-visual {
     background: #000;
     border: 2px solid #44403C;
     border-radius: 0;
+    box-shadow: 8px 8px 0px #E6A15C;
 }
 
-.theme-retro .code-header { border-bottom: 2px solid #44403C; }
-.theme-retro .code-file-name { color: #D94E36; font-family: 'VT323', monospace; }
-.theme-retro .code-content { color: #00ff41; font-family: 'VT323', monospace; font-size: 1.1rem; }
-.theme-retro .token-keyword, 
-.theme-retro .token-class, 
-.theme-retro .token-string, 
-.theme-retro .token-boolean { color: #00ff41; }
-.theme-retro .token-comment { color: #44403C; }
-.theme-retro .cursor-line { color: #00ff41; }
-.theme-retro .code-status-dot { background: #D94E36; }
+.theme-retro .code-header {
+    border-bottom: 2px solid #44403C;
+    background: #F2E9E1;
+}
+
+.theme-retro .code-file-name {
+    color: #D94E36;
+}
+
+.theme-retro .token-keyword,
+.theme-retro .token-class,
+.theme-retro .token-string,
+.theme-retro .token-boolean {
+    color: #00ff41;
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+}
+
+.theme-retro .cursor-line {
+    color: #00ff41;
+}
+
+.theme-retro .code-status-dot {
+    background: #D94E36;
+}
+
+/* Retro Dark Mode Compatibility */
+.theme-retro.dark {
+    background-color: #1C1917;
+    color: #E7E5E4;
+}
+
+.theme-retro.dark::before {
+    background-image: linear-gradient(to right, rgba(231, 229, 228, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(231, 229, 228, 0.05) 1px, transparent 1px);
+}
+
+.theme-retro.dark .navbar {
+    background: rgba(28, 25, 23, 0.95);
+    border-color: #E7E5E4;
+}
+
+.theme-retro.dark .logo {
+    background: #292524;
+    border-color: #E7E5E4;
+    box-shadow: none;
+}
+
+.theme-retro.dark .card,
+.theme-retro.dark .skill-card {
+    background: #292524;
+    border-color: #E7E5E4;
+    box-shadow: 4px 4px 0px rgba(231, 229, 228, 0.2);
+}
+
+.theme-retro.dark .hero-title,
+.theme-retro.dark .hero-desc {
+    color: #E7E5E4;
+}

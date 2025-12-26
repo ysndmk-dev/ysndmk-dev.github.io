@@ -37,11 +37,6 @@ function applyTheme(themeName) {
     // Save to localStorage
     localStorage.setItem('portfolio-theme', themeName);
 
-    // Update Theme Label if exists
-    const label = document.getElementById('current-theme-label');
-    if (label) {
-        label.textContent = themeName.charAt(0).toUpperCase() + themeName.slice(1);
-    }
 }
 
 function surpriseMe() {

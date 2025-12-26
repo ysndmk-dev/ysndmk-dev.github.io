@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700;900&family=Space+Mono&display=swap');
+
+:root {
+    --transition-speed: 0.4s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color var(--transition-speed), color var(--transition-speed), opacity 0.5s ease-in-out;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Surprise Me Button Styling */
+.surprise-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    font-size: 0.9rem;
+}
+
+.surprise-btn:active {
+    transform: scale(0.95);
+}
+
+/* Theme Label Styles */
+.theme-label {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 2rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* ==========================================
+   THEME: MODERN (Minimal & Premium)
+   ========================================== */
+.theme-modern {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: 'Inter', sans-serif;
+}
+
+.theme-modern .navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.theme-modern .card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.theme-modern .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.theme-modern .skills-container {
+    background: #0f172a;
+    color: #fff;
+}
+
+.theme-modern .skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-modern .resume-link {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 2px;
+}
+
+.theme-modern .surprise-btn {
+    background: #0f172a;
+    color: #fff;
+}
+
+/* ==========================================
+   THEME: BRUTALIST (Bold & Playful)
+   ========================================== */
+.theme-brutalist {
+    background-color: #fdf2f2;
+    /* Soft off-white */
+    color: #000;
+    font-family: 'Outfit', sans-serif;
+}
+
+.theme-brutalist .navbar {
+    background: #fff;
+    border: 4px solid #000;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+    border-radius: 12px;
+}
+
+.theme-brutalist .logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.theme-brutalist .card {
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 12px 12px 0px #000;
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+}
+
+.theme-brutalist .card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 16px 16px 0px #000;
+}
+
+.theme-brutalist .skills-container {
+    background: #34d399;
+    /* Emerald */
+    border: 4px solid #000;
+    box-shadow: 16px 16px 0px #000;
+}
+
+.theme-brutalist .skill-card {
+    background: #fff;
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0px #000;
+}
+
+.theme-brutalist .btn-primary {
+    background: #2563eb;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px #000;
+    border-radius: 8px;
+}
+
+.theme-brutalist .btn-secondary {
+    background: #fff;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px #000;
+    border-radius: 8px;
+}
+
+.theme-brutalist .surprise-btn {
+    background: #ff4d4d;
+    color: #fff;
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0px #000;
+    border-radius: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.theme-brutalist .gradient-text {
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-decoration: underline wavy #2563eb;
+}
+
+.theme-brutalist .resume-link {
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   THEME: GLASS (Sleek Dark Mode)
+   ========================================== */
+.theme-glass {
+    background-color: #020617;
+    background-image:
+        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%);
+    color: #f8fafc;
+    font-family: 'Space Mono', monospace;
+}
+
+.theme-glass .navbar {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.theme-glass .card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.theme-glass .skills-container {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.theme-glass .skill-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.theme-glass .surprise-btn {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.theme-glass .gradient-text {
+    background: linear-gradient(90deg, #ec4899, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.theme-glass .resume-link {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+.theme-glass .logo {
+    color: #60a5fa;
+}
+
+.theme-glass .social-links a {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-glass .social-links a:hover {
+    color: #fff;
+}

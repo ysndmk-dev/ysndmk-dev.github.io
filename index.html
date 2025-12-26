@@ -1,83 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasin Demek | Senior Software Engineer</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Senior Software Engineer with 5+ years of experience in React, Next.js, and TypeScript. View my portfolio of fintech and e-commerce projects.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        html { scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(90deg, #2563eb, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-900 font-sans">
 
-    <header class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+    <!-- Theme Assets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/theme-switcher.js" defer></script>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans opacity-0 transition-opacity duration-500">
+
+    <!-- Theme Indicator -->
+    <div class="theme-label">
+        Design: <span id="current-theme-label">...</span>
+    </div>
+
+    <!-- Surprise Me Button -->
+    <button onclick="surpriseMe()" class="surprise-btn group" id="surprise-btn" aria-label="Switch Design">
+        <i class="fas fa-magic transition-transform group-hover:rotate-12"></i>
+        <span>Surprise Me</span>
+    </button>
+
+    <header class="navbar fixed w-full z-50 transition-all duration-300">
         <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-black tracking-tighter hover:opacity-80 transition">YSNDMK<span class="text-blue-600">.DEV</span></a>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider text-slate-600">
+            <a href="#" class="text-xl font-black tracking-tighter hover:opacity-80 transition logo">YSNDMK<span
+                    class="text-blue-600">.DEV</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider nav-links">
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
                 <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-                <a href="cv.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Resume</a>
+                <a href="cv.html" class="resume-link">Resume</a>
             </div>
         </nav>
     </header>
 
     <section id="about" class="pt-32 pb-20 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight hero-title">
                 Senior <span class="gradient-text">Software Engineer</span>
             </h2>
-            <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-                Over 5 years of experience building high-performance web applications. Specialized in 
-                <span class="font-bold text-slate-800">React, Next.js, and TypeScript</span>.
+            <p class="text-xl opacity-80 leading-relaxed mb-10 max-w-2xl mx-auto hero-desc">
+                Over 5 years of experience building high-performance web applications. Specialized in
+                <span class="font-bold underline decoration-blue-500 underline-offset-4">React, Next.js, and
+                    TypeScript</span>.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg">
+                <a href="#projects"
+                    class="btn-primary bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg">
                     View Portfolio
                 </a>
-                <a href="cv.html" class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition shadow-sm">
+                <a href="cv.html"
+                    class="btn-secondary bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition shadow-sm">
                     Access Resume
                 </a>
             </div>
-            <div class="mt-12 flex justify-center space-x-6 text-3xl text-slate-400">
-                <a href="https://linkedin.com/in/yasin-demek" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ysndmk-dev" target="_blank" class="hover:text-slate-900 transition"><i class="fab fa-github"></i></a>
-                <a href="mailto:yasindemek@proton.me" class="hover:text-blue-500 transition"><i class="fas fa-envelope"></i></a>
+            <div class="mt-12 flex justify-center space-x-6 text-3xl social-links">
+                <a href="https://linkedin.com/in/yasin-demek" target="_blank" class="hover:text-blue-600 transition"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ysndmk-dev" target="_blank" class="hover:text-slate-900 transition"><i
+                        class="fab fa-github"></i></a>
+                <a href="mailto:yasindemek@proton.me" class="hover:text-blue-500 transition"><i
+                        class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h3 class="text-3xl font-bold mb-16 text-center">Featured Work</h3>
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-16 text-center section-title">Featured Work</h3>
             <div class="grid md:grid-cols-2 gap-10">
-                
-                <div class="group relative bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all">
-                    <div class="mb-4 text-blue-600 font-bold text-sm tracking-widest uppercase">Fintech</div>
+
+                <div class="card group relative p-8 rounded-3xl border transition-all">
+                    <div class="mb-4 text-blue-600 font-bold text-sm tracking-widest uppercase tag">Fintech</div>
                     <h4 class="text-2xl font-bold mb-4">PayPortal</h4>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        Secure banking portal for agent bank credit operations. Integrated **OIDC** and **RTK Query** for robust data management.
+                    <p class="opacity-70 mb-6 leading-relaxed">
+                        Secure banking portal for agent bank credit operations. Integrated **OIDC** and **RTK Query**
+                        for robust data management.
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">TypeScript</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">React</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">Fintech</span>
+                        <span
+                            class="badge px-3 py-1 bg-white/50 rounded-full text-xs font-semibold shadow-sm">TypeScript</span>
+                        <span
+                            class="badge px-3 py-1 bg-white/50 rounded-full text-xs font-semibold shadow-sm">React</span>
+                        <span
+                            class="badge px-3 py-1 bg-white/50 rounded-full text-xs font-semibold shadow-sm">Fintech</span>
                     </div>
                 </div>
 
-                <div class="group relative bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all">
-                    <div class="mb-4 text-purple-600 font-bold text-sm tracking-widest uppercase">E-Commerce</div>
-                    <h4 class="text-2xl font-bold mb-4 text-slate-800">BEK Platform</h4>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        B2B Pharmaceutical platform with specialized bulk purchasing and negotiation modules. Developed with **Next.js** for optimal SEO.
+                <div class="card group relative p-8 rounded-3xl border transition-all">
+                    <div class="mb-4 text-purple-600 font-bold text-sm tracking-widest uppercase tag">E-Commerce</div>
+                    <h4 class="text-2xl font-bold mb-4">BEK Platform</h4>
+                    <p class="opacity-70 mb-6 leading-relaxed">
+                        B2B Pharmaceutical platform with specialized bulk purchasing and negotiation modules. Developed
+                        with **Next.js** for optimal SEO.
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">Next.js</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">SSR</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold shadow-sm">B2B</span>
+                        <span
+                            class="badge px-3 py-1 bg-white/50 rounded-full text-xs font-semibold shadow-sm">Next.js</span>
+                        <span
+                            class="badge px-3 py-1 bg-white/50 rounded-full text-xs font-semibold shadow-sm">SSR</span>
+                        <span
+                            class="badge px-3 py-1 bg-white/50 rounded-full text-xs font-semibold shadow-sm">B2B</span>
                     </div>
                 </div>
 
@@ -85,39 +118,41 @@
         </div>
     </section>
 
-    <section id="skills" class="py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="bg-slate-900 rounded-[3rem] p-12 text-white">
-                <h3 class="text-3xl font-bold mb-12 text-center text-white/90">Core Expertise</h3>
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="skills-container rounded-[3rem] p-12 transition-all">
+                <h3 class="text-3xl font-bold mb-12 text-center section-title">Core Expertise</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="skill-card text-center p-6 rounded-2xl border transition-all">
                         <i class="fab fa-react text-4xl mb-4 text-blue-400"></i>
                         <p class="font-bold">Frontend</p>
-                        <p class="text-xs text-white/50 mt-1">React, Next.js</p>
+                        <p class="text-xs opacity-50 mt-1">React, Next.js</p>
                     </div>
-                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="skill-card text-center p-6 rounded-2xl border transition-all">
                         <i class="fas fa-code text-4xl mb-4 text-yellow-400"></i>
                         <p class="font-bold">TypeScript</p>
-                        <p class="text-xs text-white/50 mt-1">Robust Codebases</p>
+                        <p class="text-xs opacity-50 mt-1">Robust Codebases</p>
                     </div>
-                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="skill-card text-center p-6 rounded-2xl border transition-all">
                         <i class="fab fa-aws text-4xl mb-4 text-orange-400"></i>
                         <p class="font-bold">Cloud</p>
-                        <p class="text-xs text-white/50 mt-1">Lambda, DynamoDB</p>
+                        <p class="text-xs opacity-50 mt-1">Lambda, DynamoDB</p>
                     </div>
-                    <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="skill-card text-center p-6 rounded-2xl border transition-all">
                         <i class="fas fa-server text-4xl mb-4 text-green-400"></i>
                         <p class="font-bold">Backend</p>
-                        <p class="text-xs text-white/50 mt-1">Node.js, Express</p>
+                        <p class="text-xs opacity-50 mt-1">Node.js, Express</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-400 text-sm border-t border-slate-200">
-        <p>© 2025 Yasin Demek | <a href="mailto:yasindemek@proton.me" class="hover:text-blue-600 transition">yasindemek@proton.me</a></p>
+    <footer class="py-12 text-center opacity-50 text-sm border-t border-slate-200 footer">
+        <p>© 2025 Yasin Demek | <a href="mailto:yasindemek@proton.me"
+                class="hover:text-blue-600 transition">yasindemek@proton.me</a></p>
     </footer>
 
 </body>
+
 </html>

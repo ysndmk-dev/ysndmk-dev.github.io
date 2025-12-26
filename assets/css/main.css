@@ -540,6 +540,10 @@ body {
     border-bottom: 2px solid #00f3ff;
 }
 
+.theme-cyber .hero-section {
+    background: #050505 !important;
+}
+
 .theme-cyber .logo span {
     color: #00f3ff !important;
 }

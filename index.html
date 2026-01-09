@@ -2,407 +2,338 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasin Demek | Senior Software Engineer</title>
-
-    <!-- Meta Tags for SEO -->
+    <title>Yasin Demek — Senior Software Engineer</title>
     <meta name="description"
-        content="Senior Software Engineer with 5+ years of experience in React, Next.js, and TypeScript. View my portfolio of fintech and e-commerce projects.">
+        content="Senior Software Engineer with 5+ years of experience building high-performance web applications.">
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        cyber: {
-                            black: "#050505",
-                            dark: "#0b0b10",
-                            slate: "#15151a",
-                            primary: "#00f3ff",
-                            secondary: "#ff0099",
-                            accent: "#ffee00",
-                            success: "#00ff41",
-                        },
-                        retro: {
-                            primary: "#D94E36",
-                            "primary-dark": "#9C3220",
-                            secondary: "#E6A15C",
-                            "bg-light": "#F2E9E1",
-                            "bg-dark": "#1C1917",
-                            "surface-light": "#FFFAF5",
-                            "surface-dark": "#292524",
-                            "text-light": "#44403C",
-                            "text-dark": "#E7E5E4",
-                            border: "#44403C",
-                        },
-                    },
-                    fontFamily: {
-                        cyberDisplay: ["Orbitron", "sans-serif"],
-                        cyberBody: ["Rajdhani", "sans-serif"],
-                        cyberMono: ["Share Tech Mono", "monospace"],
-                        retroDisplay: ["'VT323'", "monospace"],
-                        retroBody: ["'Space Mono'", "monospace"],
-                    },
-                    backgroundImage: {
-                        'cyber-grid': "linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px)",
-                        'cyber-gradient': "linear-gradient(135deg, rgba(5,5,5,0.9) 0%, rgba(11,11,16,0.95) 100%)",
-                        'retro-grid': "linear-gradient(to right, rgba(68, 64, 60, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(68, 64, 60, 0.05) 1px, transparent 1px)",
-                    },
-                    boxShadow: {
-                        'neon-cyan': '0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3)',
-                        'neon-pink': '0 0 10px rgba(255, 0, 153, 0.5), 0 0 20px rgba(255, 0, 153, 0.3)',
-                        'retro': '4px 4px 0px 0px rgba(68, 64, 60, 1)',
-                        'retro-hover': '6px 6px 0px 0px rgba(68, 64, 60, 1)',
-                    },
-                },
-            },
-        };
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
-        rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
 
-    <!-- Theme Assets -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/theme-switcher.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background: #000;
+            color: #fff;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.05em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+            padding: 0.125rem 0.375rem;
+            margin: -0.125rem -0.375rem;
+            border-radius: 0.25rem;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        a:hover {
+            background: rgba(0, 0, 0, 0.08);
+            color: inherit;
+        }
+
+        main {
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 6rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                padding: 12rem 1.5rem;
+            }
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 0.95;
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 5rem;
+            }
+        }
+
+        header p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            header p {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Sections */
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .section-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        section p {
+            font-size: 1.125rem;
+        }
+
+        /* Work Items */
+        .work-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .work-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            border-left: 2px solid #000;
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .work-item h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .work-item .desc {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .work-links a {
+            font-size: 0.875rem;
+            font-weight: 700;
+            padding: 0 0.25rem;
+            margin: 0 -0.25rem;
+        }
+
+        /* Expertise List */
+        .expertise-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .expertise-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .expertise-list li {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .expertise-list li::before {
+            content: '→ ';
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-email {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            word-break: break-all;
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            margin: -0.5rem -0.75rem;
+            border-radius: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .contact-email {
+                font-size: 1.875rem;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .footer-links a {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.25rem 0.5rem;
+            margin: -0.25rem -0.5rem;
+            border-radius: 0.25rem;
+        }
+
+        .copyright {
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 font-sans transition-opacity duration-500">
-    <!-- Scanlines for Retro/Cyber Theme -->
-    <div class="scanlines"></div>
+<body>
+    <main>
+        <header>
+            <h1>
+                Senior <br>
+                Software <br>
+                Engineer
+            </h1>
+            <p>
+                Yasin Demek. Architecting high-performance systems and scalable web applications.
+            </p>
+        </header>
 
+        <section>
+            <h2 class="section-title">About</h2>
+            <p>
+                Senior Engineer with 5+ years of experience. Focused on React, TypeScript, and cloud-native
+                infrastructure. I build tools that solve real problems with zero friction.
+            </p>
+        </section>
 
-    <!-- Theme Transition Overlay -->
-    <div class="surprise-container group">
-        <div class="theme-dropdown">
-            <button onclick="applyTheme('modern')" class="theme-option">Modern</button>
-            <button onclick="applyTheme('brutalist')" class="theme-option">Brutalist</button>
-            <button onclick="applyTheme('glass')" class="theme-option">Glass</button>
-            <button onclick="applyTheme('professional')" class="theme-option">Professional</button>
-            <button onclick="applyTheme('cyber')" class="theme-option">Cyber</button>
-            <button onclick="applyTheme('retro')" class="theme-option">Retro</button>
-        </div>
-        <!-- Surprise Me Button -->
-        <button onclick="surpriseMe()" class="surprise-btn group" id="surprise-btn" aria-label="Switch Design">
-            <i class="fas fa-magic transition-transform group-hover:rotate-12"></i>
-            <span>Surprise Me</span>
-        </button>
-    </div>
-
-    <header class="navbar fixed w-full z-50 transition-all duration-300">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold font-display tracking-tight logo flex items-center gap-2">
-                <span class="material-symbols-outlined cyber-icon-only hidden">terminal</span>
-                YSNDMK<span class="text-primary text-blue-600">.DEV</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider nav-links">
-                <a href="#about" class="hover:text-blue-600 transition">&lt;ABOUT /&gt;</a>
-                <a href="#projects" class="hover:text-blue-600 transition">&lt;PROJECTS /&gt;</a>
-                <a href="#skills" class="hover:text-blue-600 transition">&lt;SKILLS /&gt;</a>
-                <a href="Yasin Demek's Resume.pdf" download class="resume-link clip-corner">Download Resume</a>
-            </div>
-        </nav>
-    </header>
-
-    <section id="about" class="hero-section relative pt-32 pb-20 px-6 overflow-hidden">
-        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 relative z-10">
-            <div class="flex-1 text-center lg:text-left hero-content">
-                <div class="inline-block px-4 py-1.5 mb-6 badge transition-all uppercase tracking-widest font-bold">
-                    <span class="w-2 h-2 bg-cyber-success rounded-full animate-ping mr-2 hidden cyber-status"></span>
-                    Available for hire
-                </div>
-
-                <!-- Standard Title -->
-                <h1
-                    class="text-5xl md:text-7xl font-display font-extrabold mb-6 tracking-tight hero-title default-title">
-                    Senior <span class="gradient-text">Software Engineer</span>
-                </h1>
-
-                <!-- Cyber Title (Hidden by default, shown in CSS) -->
-                <h1 class="text-5xl md:text-7xl font-display font-black tracking-tight text-white mb-6 leading-none glitch-text cyber-title hidden"
-                    data-text="ARCHITECTING THE FUTURE">
-                    ARCHITECTING <br />
-                    <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-primary via-white to-cyber-secondary">THE
-                        FUTURE</span>
-                </h1>
-
-                <p class="text-xl opacity-80 leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0 hero-desc">
-                    Senior Software Engineer with <span class="text-cyber-primary cyber-emphasize">5+ years</span> of
-                    experience building high-performance web applications. Specialized in
-                    <span class="font-bold underline decoration-blue-500 underline-offset-4 cyber-underline">React,
-                        Next.js, and TypeScript</span> protocols.
-                </p>
-                <div class="flex flex-wrap justify-center lg:justify-start gap-4 hero-actions">
-                    <a href="#projects"
-                        class="btn-primary px-8 py-4 rounded-xl font-bold transition shadow-lg clip-corner">
-                        View Portfolio
-                    </a>
-                    <a href="Yasin Demek's Resume.pdf" download
-                        class="btn-secondary px-8 py-4 rounded-xl font-bold transition shadow-sm clip-corner">
-                        Download Resume
-                    </a>
-                </div>
-                <div class="mt-12 flex justify-center lg:justify-start space-x-8 text-3xl social-links">
-                    <a href="https://linkedin.com/in/yasin-demek" target="_blank"
-                        class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/ysndmk-dev" target="_blank" class="hover:text-slate-900 transition"><i
-                            class="fab fa-github"></i></a>
-                    <a href="mailto:yasindemek@proton.me" class="hover:text-blue-500 transition"><i
-                            class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-
-            <!-- Code Visual / Visual Element -->
-            <div class="flex-1 w-full max-w-lg code-visual-wrapper transition-all duration-500">
-                <div class="code-visual relative z-10 p-6 shadow-2xl font-mono text-sm leading-relaxed overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-[2px] cursor-scanner" style="display:none;"></div>
-                    <div class="flex items-center justify-between mb-6 border-b pb-4 code-header">
-                        <div class="flex items-center gap-2">
-                            <div class="w-2 h-2 rounded-full code-status-dot animate-pulse"></div>
-                            <span class="text-xs uppercase tracking-widest code-file-name">User_Profile.tsx</span>
-                        </div>
-                        <div class="flex gap-2 terminal-dots">
-                            <div class="w-2.5 h-2.5 rounded-full dot-1"></div>
-                            <div class="w-2.5 h-2.5 rounded-full dot-2"></div>
-                            <div class="w-2.5 h-2.5 rounded-full dot-3"></div>
-                        </div>
+        <section>
+            <h2 class="section-title">Selected Work</h2>
+            <div class="work-list">
+                <div class="work-item">
+                    <h3>PayPortal</h3>
+                    <p class="desc">Fintech / Agent banking infrastructure for Paynet (acquired by iyzico).</p>
+                    <div class="work-links">
+                        <!-- <a href="#">Source</a> -->
+                        <!-- <a href="#">Live</a> -->
                     </div>
-                    <div class="space-y-1 code-content">
-                        <p><span class="token-keyword">interface</span> <span class="token-class">Engineer</span> {</p>
-                        <p class="pl-4">id: <span class="token-string">'Yasin Demek'</span>;</p>
-                        <p class="pl-4">class: <span class="token-string">'Senior Engineer'</span>;</p>
-                        <p class="pl-4">augmentation: [<span class="token-string">'React'</span>, <span
-                                class="token-string">'Next.js'</span>, <span class="token-string">'TS'</span>];</p>
-                        <p class="pl-4">status: <span class="token-boolean">READY</span>;</p>
-                        <p>}</p>
-                        <p class="mt-4 opacity-50 code-comment">// Initializing protocol...</p>
-                        <p class="animate-pulse cursor-line">_</p>
+                </div>
+                <div class="work-item">
+                    <h3>BEK Platform</h3>
+                    <p class="desc">E-commerce / B2B pharmaceutical negotiation & product management.</p>
+                    <div class="work-links">
+                        <!-- <a href="#">Source</a> -->
+                        <!-- <a href="#">Live</a> -->
+                    </div>
+                </div>
+                <div class="work-item">
+                    <h3>Kemer Country Club</h3>
+                    <p class="desc">Hospitality / Responsive reservation system & galleries.</p>
+                    <div class="work-links">
+                        <a href="https://www.kemercountry.com/tr" target="_blank">Live</a>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <h3>LBS Billing</h3>
+                    <p class="desc">SaaS / Healthcare billing with Node.js, Elasticsearch & AWS.</p>
+                    <div class="work-links">
+                        <!-- <a href="#">Source</a> -->
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section border-y border-slate-200 bg-white py-12">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stats-grid">
-                <div class="stat-item">
-                    <div class="text-4xl font-bold stats-value">5+</div>
-                    <div class="text-xs uppercase tracking-widest opacity-50 mt-2 stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="text-4xl font-bold stats-value">20+</div>
-                    <div class="text-xs uppercase tracking-widest opacity-50 mt-2 stat-label">Projects Deployed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="text-4xl font-bold stats-value">100%</div>
-                    <div class="text-xs uppercase tracking-widest opacity-50 mt-2 stat-label">System Sync</div>
-                </div>
-                <div class="stat-item">
-                    <div class="text-4xl font-bold stats-value">∞</div>
-                    <div class="text-xs uppercase tracking-widest opacity-50 mt-2 stat-label">Code Cycles</div>
-                </div>
+        <section>
+            <h2 class="section-title">Expertise</h2>
+            <ul class="expertise-list">
+                <li>React / Next.js</li>
+                <li>TypeScript / Node.js</li>
+                <li>AWS Cloud Services</li>
+                <li>RTK Query / State</li>
+                <li>API Architecture</li>
+                <li>CI/CD Pipelines</li>
+            </ul>
+        </section>
+
+        <footer>
+            <div class="contact-block">
+                <h2 class="section-title">Contact</h2>
+                <a class="contact-email" href="mailto:yasindemek@proton.me">
+                    yasindemek@proton.me
+                </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 bg-slate-50">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-16 gap-4 border-b border-slate-200 pb-8 projects-header">
-                <div>
-                    <h2 class="text-xs font-bold text-blue-600 tracking-widest uppercase mb-3 section-subtitle">Featured
-                        Operations</h2>
-                    <h3 class="text-3xl md:text-5xl font-extrabold tracking-tight section-title uppercase">Selected
-                        Projects</h3>
-                </div>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/yasin-demek" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ysndmk-dev" target="_blank">GitHub</a>
+                <a href="Yasin Demek's Resume.pdf">CV</a>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Project 1 -->
-                <div
-                    class="group card bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <span
-                                class="tag-badge text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Fintech</span>
-                            <div class="flex space-x-4 opacity-40 group-hover:opacity-100 transition">
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> -->
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a> -->
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4">PayPortal</h4>
-                        <p class="opacity-70 mb-8 leading-relaxed text-sm">Developed a secure platform for agent bank
-                            credit operations as an outsource software engineer for Paynet (successfully acquired by
-                            iyzico). Architected robust financial workflows using TypeScript, RTK Query, and OIDC for
-                            secure authentication. Integrated Sentry for mission-critical error tracking and utilized
-                            React Hook Form to handle complex transaction data.</p>
-                        <div class="flex flex-wrap gap-2 tags">
-                            <span
-                                class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">TypeScript</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">RTK
-                                Query</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">React Hook
-                                Form</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">OIDC</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div
-                    class="group card bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <span
-                                class="tag-badge text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">E-Commerce</span>
-                            <div class="flex space-x-4 opacity-40 group-hover:opacity-100 transition">
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> -->
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a> -->
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4">BEK Platform</h4>
-                        <p class="opacity-70 mb-8 leading-relaxed text-sm">Built complex frontend features for a
-                            specialized e-commerce project using Next.js, focusing on high-performance product
-                            management and negotiation tools. Implemented Sentry for real-time error tracking and
-                            utilized React Hook Form to handle mission-critical financial data validation.</p>
-                        <div class="flex flex-wrap gap-2 tags">
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Next.js</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">React Hook
-                                Form</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Sentry</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">SSR</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: LBS -->
-                <div
-                    class="group card bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <span
-                                class="tag-badge text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">SaaS
-                                / Healthcare</span>
-                            <div class="flex space-x-4 opacity-40 group-hover:opacity-100 transition">
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> -->
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a> -->
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4">LBS Billing</h4>
-                        <p class="opacity-70 mb-8 leading-relaxed text-sm">Contributed to the design and software
-                            architecture of a SaaS project, utilizing Node.js on EC2 and Elasticsearch for optimal data
-                            performance. Managed cloud infrastructure using AWS services including Elastic Beanstalk,
-                            DynamoDB, Lambda, Amplify, and CloudFront.</p>
-                        <div class="flex flex-wrap gap-2 tags">
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Node.js</span>
-                            <span
-                                class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Elasticsearch</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">AWS
-                                Lambda</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">DynamoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 4: Kemer Country Club -->
-                <div
-                    class="group card bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="relative z-10">
-                        <div class="flex justify-between items-start mb-6">
-                            <span
-                                class="tag-badge text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Hospitality</span>
-                            <div class="flex space-x-4 opacity-40 group-hover:opacity-100 transition">
-                                <!-- <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> -->
-                                <a href="https://www.kemercountry.com/tr" target="_blank" rel="noopener noreferrer"><i
-                                        class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4">Kemer Country Club</h4>
-                        <p class="opacity-70 mb-8 leading-relaxed text-sm">Designed and implemented a responsive web
-                            application
-                            featuring business showcases, photo galleries, and customer reservation systems using
-                            Next.js.</p>
-                        <div class="flex flex-wrap gap-2 tags">
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Next.js</span>
-                            <span
-                                class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Responsive</span>
-                            <span
-                                class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Reservations</span>
-                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded uppercase">Gallery</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 px-6 bg-white overflow-hidden skills-section">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-xs font-bold text-blue-600 tracking-widest uppercase mb-3 section-subtitle">System
-                    Arsenal</h2>
-                <h3 class="text-3xl md:text-5xl font-extrabold tracking-tight section-title uppercase">Core Expertise
-                </h3>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div
-                    class="skill-card p-8 border border-slate-100 rounded-2xl text-center hover:border-blue-500/30 transition shadow-sm">
-                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center bg-slate-50 rounded-xl">
-                        <i class="fab fa-react text-2xl text-blue-500"></i>
-                    </div>
-                    <h5 class="font-bold mb-2">React Core</h5>
-                    <p class="text-[10px] uppercase tracking-widest opacity-50">Redux, RTK, Context</p>
-                </div>
-                <div
-                    class="skill-card p-8 border border-slate-100 rounded-2xl text-center hover:border-blue-500/30 transition shadow-sm">
-                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center bg-slate-50 rounded-xl">
-                        <i class="fas fa-layer-group text-2xl text-slate-800"></i>
-                    </div>
-                    <h5 class="font-bold mb-2">Full Stack</h5>
-                    <p class="text-[10px] uppercase tracking-widest opacity-50">Next.js, SSR, Node</p>
-                </div>
-                <div
-                    class="skill-card p-8 border border-slate-100 rounded-2xl text-center hover:border-blue-500/30 transition shadow-sm">
-                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center bg-slate-50 rounded-xl">
-                        <i class="fab fa-aws text-2xl text-orange-400"></i>
-                    </div>
-                    <h5 class="font-bold mb-2">Cloud Infra</h5>
-                    <p class="text-[10px] uppercase tracking-widest opacity-50">S3, Lambda, EC2</p>
-                </div>
-                <div
-                    class="skill-card p-8 border border-slate-100 rounded-2xl text-center hover:border-blue-500/30 transition shadow-sm">
-                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center bg-slate-50 rounded-xl">
-                        <i class="fas fa-shield-alt text-2xl text-blue-400"></i>
-                    </div>
-                    <h5 class="font-bold mb-2">Type Safety</h5>
-                    <p class="text-[10px] uppercase tracking-widest opacity-50">Strict, Generics</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 text-center border-t border-slate-100 bg-white footer">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="opacity-50 text-sm italic font-mono footer-copyright">© 2025 Yasin Demek | All systems
-                operational.</p>
-            <div class="flex items-center gap-2 footer-version">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse cyber-status hidden"></span>
-                <span class="text-[10px] font-mono opacity-40 uppercase tracking-widest version-text">v3.0.1 //
-                    CYBERPUNK_THEME</span>
-            </div>
-        </div>
-    </footer>
-
+            <p class="copyright">
+                © 2026 Yasin Demek / Built for speed and utility.
+            </p>
+        </footer>
+    </main>
 </body>
 
 </html>

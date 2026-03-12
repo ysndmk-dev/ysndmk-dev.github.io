@@ -750,6 +750,34 @@
       letter-spacing: 0.05em;
     }
 
+    .footer__legal {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer__link {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer__link:hover {
+      color: var(--accent);
+    }
+
+    @media (min-width: 640px) {
+      .footer__legal {
+        justify-content: flex-end;
+      }
+    }
+
     /* Waitlist success */
     .waitlist-success {
       font-family: var(--sans);
@@ -1037,7 +1065,10 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">Iterate Social</div>
-      <p class="footer__copy">&copy; 2026 Iterate Social. All rights reserved.</p>
+      <div class="footer__legal">
+        <p class="footer__copy">&copy; 2026 Iterate Social. All rights reserved.</p>
+        <a href="privacy.html" class="footer__link">Privacy Policy</a>
+      </div>
     </div>
   </footer>
 </body>
